@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: "./"
+      dockerfile: Dockerfile.dev
+    volumes:
+     - "./src:/usr/src/app/src"
+    ports:
+     - 4001:3000
+    environment:
+     - PORT=3000
